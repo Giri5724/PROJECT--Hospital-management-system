@@ -1,0 +1,593 @@
+1. Download an IDE
+-Example sublime text from (www.sublimetext.com)
+-Choose your operating system (ex: 64 Bit) to download
+
+2. Download wamp server
+- go to (sourceforge.net/projects/wampserver)
+-click on download
+
+NOTE: Now install both application (Sublime Text and Wamp server)
+
+3. Start the server
+-You will see the server icon on right-corner of the windows tools bar
+-icon has to change from RED to Green
+
+NOTE: To resolve server issue
+. go to (google.com) and type in (microsoft visual  c++ redistributable)
+. click on (www.techpowerup.com) and click on download and install the setup
+. Go to drive C, Click on Wamp64 (if your server is xampp, you do it HTDOCS) and create Project Folder,
+and name it (example: hms)
+.
+
+4.Inside the root project folder (hms) , create another folder in it an (name it: include)
+-inside (include folder) , create a html file and name it(header.php)
+.add bootstrap libraries by going to google.com and search for (bootstrap cdn), scroll down and click on
+(Quick Start · BootstrapCDN) whic will redirect to (bootstrapcdn.com)
+
+select:the CSS, ( https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css) , and paste in a link tag
+inside the head of html
+
+. Add jquery cdn library by typing (jquery cdn) in google and click (JQUERY CDN) which will redirect to
+(code.jquery.com)
+
+Under the latex version,like JQuery 3.x, select/click(slim) and copy the link and paste in the head of HTML
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+. gO TO (www.w3schools.com/jquery/jquery_get_started.asp) and click on (jquery Get started)
+Scroll down: and go to GOOGLE CDN and copy (<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>)
+and paste in the head tag of your html.
+
+5.create new file inside Root (MS) folder, and name it (index.php)
+- include (header.php) in this file (index.php) using
+
+<?php
+include("include/header.php")
+?>
+
+-we will now work on (header.php) and it will appear in (index.php)
+.   create the (navbar) using the (nav) tag , using bootstrap4 classes
+
+<nav class="navbar navbar-expand-lg navbar-info bg-info">
+
+
+         <div class="mr-auto"></div>
+
+         <ul class="navbar-nav" >
+             <li class="nav-item"><a href="#" class="nav-link">Admin</a></li>
+         </ul>
+ </nav>
+
+ -Inside the (nav) tag , give write the application name in a text for using header tag (h5)
+
+  <h5 class="text-white">Hospital Management System</h5>
+- Inside same (nav) tag, create and unordered lists (tag) with list (tags)
+
+<ul class="navbar-nav" >
+             <li class="nav-item"><a href="#" class="nav-link">Admin</a></li>
+             <li class="nav-item"><a href="#" class="nav-link">Doctor</a></li>
+             <li class="nav-item"><a href="#" class="nav-link">Patient</a></li>
+
+ </ul>
+
+ - To make the link text wite ,use the bootstrap class (text-white)
+
+ 6. Now we need to design the index.php, to display information below the navbar
+ - create a container , as main division for your page
+ <div class="container">
+
+ </div>
+
+ - Inside the container, create the (rows) division by setting it to (12)
+
+  <div class="container">
+         <div class="col-md-12">
+
+         </div>
+  </div>
+
+  - After setting it into (12) span size per the browswer size, set a (row)
+
+    <div class="container">
+           <div class="col-md-12">
+                  <div class="row">
+
+                  </div>
+           </div>
+    </div>
+
+ -  After the (row) , you can nw set your screen to division EX: col-md-3 , col-md-3, col-md-3, col-md-3
+<div class="container">
+          <div class="col-md-12">
+              <div class="row">
+                    <div class="col-md-3 mx-1 shadow">
+
+                    </div>
+
+                     <div class="col-md-3 mx-1 shadow">
+
+                     </div>
+
+                     <div class="col-md-3 mx-1 shadow">
+
+                      </div>
+              </div>
+          </div>
+      </div>
+
+ - add your images if required by using the (img) tag
+
+ <div class="container">
+           <div class="col-md-12">
+               <div class="row">
+                     <div class="col-md-3 mx-1 shadow">
+                         <img src="../img/info.png" alt="" style="width: 100%">
+                     </div>
+
+                   <div class="col-md-3 mx-1 shadow">
+                       <img src="../img/patient.jpeg" alt="" style="width: 100%">
+                   </div>
+
+                   <div class="col-md-3 mx-1 shadow">
+                       <img src="../img/hospital.jpeg" alt="" style="width: 100%">
+                   </div>
+               </div>
+           </div>
+       </div>
+
+ - to create a gap between the navbar and the container , use margin-top
+
+ <div style="margin-top: 50px"></div>
+
+
+ 7. ADMIN LOGIN
+ A. Create a file in the root folder (HMS) and name the file (adminlogin.php)
+ - since it is (php extension file) , write the PHP opening and closing tag, and call/include the (header.php)
+
+<?php
+  include ("include/header.php")
+
+?>
+
+ - write the html tags
+ -Go to the (header.php) and add/reference the (adminlogin.php) file ,to one of the (unordered) links, in this case the (A   dmin) link on the NAVBAR.
+
+ <ul class="navbar-nav" >
+              <li class="nav-item"><a href="../adminlogin.php" class="nav-link text-white">Admin</a></li>
+  </ul>
+
+  - Create a login Form in the
+  a. Create a container tag
+
+     <div class="container">
+
+
+      </div>
+
+  b. Set a browser size column division  (which is 12), inside the container tag
+       <div class="container">
+                  <div class="col-md-12">
+
+                  </div>
+
+       </div>
+
+  c Set (row) inside the browser set (which is set to 12)
+
+   <div class="container">
+              <div class="col-md-12">
+                  <div class="row">
+
+                  </div>
+
+              </div>
+   </div>
+
+  d, Now, inside the row you can now design your form into divisions of (4-4-4) or(3-3-3-3) or (3,6,3) ,whichever way it sould make up the limit of (12 division)
+
+        <div class="container">
+                   <div class="col-md-12">
+                       <div class="row">
+                           <div class="col-md-3">
+
+                           </div>
+
+                           <div class="col-md-6">
+
+                           </div>
+
+                           <div class="col-md-3">
+
+                           </div>
+
+                       </div>
+
+                   </div>
+
+
+           </div>
+
+ - Create the form inside the (col-md-6), (note: just for this project)..you can do it in any of them depending on the size you want fr your form
+  a. create the form tag, and name the method post , since the request is to post data
+
+       <form action="" method="post">
+
+
+      </form>
+
+  b. create a div tag and bootstrap class (form-group) to group the fields of the form
+
+         <form action="" method="post">
+
+             <div class="form-group">
+
+
+              </div>
+
+         </form>
+
+    c. Inside the form group, provide the field for input of data
+
+    <form action="" method="post">
+
+              <div class="form-group">
+                    <label for="">Username</label>
+                        <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
+
+              </div>
+
+               <div class="form-group">
+                      <label for="">Password</label>
+                                   <input type="password" name="pass" class="form-control">
+
+               </div>
+
+                      <input type="submit" name="login" class="btn btn-success">
+      </form>
+
+
+      d. use bootstrap (jumbotron) inside the (col-md-6) to give the form a nice background
+
+      e. To give a gap between the form and the navbar, I created a (margin-top) using (div) tag
+
+      <div style="margin-top: 60px"></div>
+
+      e. Add background image to the main body of the html page
+
+      <body style="background-image:  url(img/ghanaHospital.jpg)">
+
+
+      </body>
+
+      f.remove the image blocks by using bootstrap/css (background-repeat) set to (no-repeat) and (background-size) set to (cover)
+
+       <body style="background-image:  url(img/ghanaHospital.jpg); background-repeat: no-repeat; background-size: cover">
+
+
+       </body>
+
+      g. Add logo on the admin Login Form and to add image and center the logo image do the ff:
+
+      Note: You go to www.google.com , type (admin login) in the search
+
+        <img src="img/adminLoginlogo.png"  class="col-md-12" alt="" style="width: 200px; height: 150px; margin: auto; display: block">
+
+
+ 8. Let create the database:
+
+ - go to (localost/phpmyadmin)
+ -click on database
+ -name the database (hms) and select Collation, & click on (CREATE)
+ -name your table(admin), and number of columns (4), click on (GO)
+ - Set your fields names (id, username, password, profile)
+ - select TYPES ( id-> Int, username-> varchar, password-> varchar, profile->varchar)
+ - select LENGTH/VALUES (id->100, username->100, password -> 100, profile->100)
+ - set the (id) to (A-I), and click (SAVE)
+
+9. In the IDE, create a file in the (include) folder and name it (connection.php)
+-create connection using ($connect = mysqli_connect("localhost", "root", "", 'hms');
+
+10. include the connection in the (adminlogin.php) file
+<?php
+    include "include/connection.php";
+?>
+
+11.  Inside the PHP Opening as seen in point (10), do the ff
+
+- Set the form submit button which in this case we gave it a name (login),
+
+     if(isset($_POST['login']))
+     {
+
+      }
+-  Create a variable for each field of the form with their respective (name) given to each form (input) tag
+
+  if(isset($_POST['login']))
+  {
+
+         $username = $_POST['uname'];
+         $password = $_POST['pass'];
+
+    }
+- create a variable and pass a generic array method in it to control errors from USERS
+    if(isset($_POST['login']))
+      {
+
+             $username = $_POST['uname'];
+             $password = $_POST['pass'];
+
+              $error = array();
+
+        }
+- Write a condition (with IF STATEMENT) to control when a USER tries clicking on the (submit) button without providing any input
+a. Use the PHP method empty(), and pass the variables you created to keep the data the USER will provide
+b. So, if you pass the variables which will keep the USERS data into the empty() method ,to check if the variable was able to collect a data or not
+    from the USER
+c. If the variable does not contain any data, inside the IF-CONDITION , set an array key (with any NAME you want) to the array variable which you set
+    earlier, as seen above and pass a STRING to it.
+d. Same condition must be set as (ELSE) Condition or (ELSE IF) condition
+
+if(isset($_POST['login'])){
+
+         $username = $_POST['uname'];
+         $password = $_POST['pass'];
+
+         $error = array();
+
+         if (empty($username))
+         {
+             $error['admin'] = "Enter Username";
+         }elseif (empty($password)) {
+             $error['admin']= "Enter Password";
+         }
+}
+
+
+12.After checking the Condition if the Variables of the form fields contain data from the USER, and passing them as an Object to an Array variable
+   and assigning a key to it,next do this
+
+   - pass the Array Variable ($error) to a (count) method and equalize it to (0) , which means if the (Count) reads through the ARRAY and
+     check if there is no error (meaning if there is no case of USER not providing data), then
+
+      if (count($error)==0){
+
+
+              }
+
+   - If NO error, a query is written to select the existing data from the database, and the query is saved in a variable (EX: $query)
+
+    if (count($error)==0){
+
+                $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+
+
+            }
+
+
+   - The variable ($query) is then passed into a (mysqli query method) which takes the (database connection variable and the query variable)
+     which contains the query.
+
+     EXAMPLE:
+     mysqli_query($con,$query);
+
+
+      if (count($error)==0){
+
+                  $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+
+                  mysqli_query($con,$query);
+
+
+              }
+
+   - Now, save the (mysqli_query) into a variable ($result) which will be used for authentication.
+
+       if (count($error)==0){
+
+                   $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+
+                   $result = mysqli_query($con,$query);
+
+
+               }
+   - Use a CONDITIONAL STATEMENT To check if the (result) variable which contains the (query statement) to select data from database , has a match
+      of data from te database.
+
+      This is achieved by passing the (result) variable into an MSQLI METHOD which check data in database per number of rows (mysqli_num_rows)
+        --    Equate the condition to (1), which will check if at least the condition contains one result.
+
+       if (count($error)==0){
+
+                   $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+
+                   $result = mysqli_query($con,$query);
+
+                   if (mysqli_num_rows($result) == 1){
+                       echo "<script>alert('You have logged in As an Admin')</script>";
+
+                       $_SESSION['admin'] = $username;
+
+                       header("Location:admin/index.php");
+                       exit();
+
+
+                   }
+                   else{
+                       echo "<script>alert('Invalid Username or Password')</script>";
+
+                   }
+               }
+
+   -If it contains one result , then write an executable task in the CONDITIONAL STATEMENT.
+
+
+     if (count($error)==0){
+
+                      $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+
+                      $result = mysqli_query($con,$query);
+
+                      if (mysqli_num_rows($result) == 1){
+                          echo "<script>alert('You have logged in As an Admin')</script>"; //executionable task
+
+
+
+                          header("Location:admin/index.php");
+                          exit();
+
+
+                      }
+                      else{
+                          echo "<script>alert('Invalid Username or Password')</script>";
+
+                      }
+                  }
+
+   NOTE: At this point you can provide a manual values inside the database for the query to read.
+
+   - Put the database result into a session by providing an array KEY -.VALUE PAIR
+
+        if (count($error)==0){
+
+                         $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+
+                         $result = mysqli_query($con,$query);
+
+                         if (mysqli_num_rows($result) == 1){
+                             echo "<script>alert('You have logged in As an Admin')</script>"; //executionable task
+
+                             $_SESSION['admin'] = $username;
+
+                             /*header("Location:admin/index.php");
+                             exit();*/
+
+
+                         }
+                         else{
+                             echo "<script>alert('Invalid Username or Password')</script>";
+
+                         }
+                     }
+
+- Run (localhost/hms/adminlogin.php) in the browser
+- enter the correct login credentials in the form as set in database by default
+
+13. create new folder in the project root and name it (admin)
+- Inside this folder create a file and name (index.php)
+- introduce your html tags
+- in the Html Body introduce PHP format ,open and close and include the (header.php) which is in (include) folder
+
+<?php
+include("../include/header.php");
+?>
+
+- Now go into the (adminlogin.hp) file ,located in the (hms) folder which is the project Root
+- Inside the IF-CONDITION which checks whether the Mysqli request contains at least a result, redirect the page to this (admin) page created inside the admin file
+
+ if (mysqli_num_rows($result) == 1){
+                 echo "<script>alert('You have logged in As an Admin')</script>";
+
+                 $_SESSION['admin'] = $username;
+
+                 header("Location:admin/index.php");
+                 exit();
+
+             }
+
+14. In the (header.php) which is in the (include) folder, we will copy all the (links) in the navbar
+
+<ul class="navbar-nav>
+<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
+ <li class="nav-item"><a href="#" class="nav-link text-white">Doctor</a></li>
+ <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>
+</ul>
+
+- introduce PHP in the unordered list
+- Set the admin which is in session, and put it in a variable
+- Give a condition that if it is (admin) display, a page with two links (admin) username and (logout) in the navbar,
+-if not display all the three links in the navbar
+
+ <?php
+
+                  if (isset($_SESSION['admin'])){
+                           $user = $_SESSION['admin'];
+                        echo '
+
+             <li class="nav-item"><a href="../adminlogin.php" class="nav-link text-white">'.$user.'</a></li>
+             <li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>
+
+                                ';
+
+
+                  }else{
+
+                      echo '
+
+                          <li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
+             <li class="nav-item"><a href="#" class="nav-link text-white">Doctor</a></li>
+             <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>
+                      ';
+                  }
+             ?>
+
+
+
+
+
+
+To display the error on the FORM YOU can introduce PHP tags inside the html form, and on top of the form-group (first field), do the below
+
+     - introduce a (div) and create bootstrap class with bootstrap (alert alert-danger)
+     - Now write a conditional statement, to set the array variable that was prepared with a KEY and a value of errors passed to it (An error array)
+     - After setting, write a statement in the CONDITIONAL STATEMENT Scope, by passing the (error) into another variable ($sow)
+
+       This will display the String passed to the Array variable. If NO Error is found nothing will be displayed.
+
+     <div class="alert alert-danger">
+        <?php
+          if (isset($error['admin']))
+          {
+           $show =$error['admin'];
+           }
+           else
+           {
+               $show = "";
+            }
+
+                echo $show;
+            ?>
+      </div>
+- In the (header.php) file which contains the NAVBAR and the various main links for the web application .
+     Changes was done in this file by introducing PHP condition(s) to
+      a. To set the array key session '$_SESSION['admin'] = $username'. The session was 1st started  in the (adminlogin.php) file.
+
+           if (isset($_SESSION['admin']))
+           {
+               $user = $_SESSION['admin'];
+                $user = $_SESSION['admin'];
+            }
+        b. After setting, you echo to display your kind of navbar, IF CONDITION set to compare whether the USERNAME input which was set in SESSION in (adminlogin.php)
+           still has the data.
+        bi. Beyond the IF condition above, the ELSE CONDITION will display the navbar in this section on all pages.
+
+- The Alert Danger which displays the error when the ADMIN USER enters wrong credential was changed from how it was made constant by introducing it in the (div)
+     tag (refer to point 13) .
+     -   Changed to, after setting the ERROR variable  array, we pass the ARRAY variable key into a new variable
+     -   Since this new variable will contains the ERROR description which was kept at the point where USER input was collected as POST method.
+     - Introduce a <h4></h4>
+
+
+LOGOUT
+
+14. Create a file in (admin) folder and name it (logout.php)
+- open PHP TAGS
+
+<?php
+
+?>
+
+- start session
+<?php
+   session_start();
+?>
+
+- go into (header.php) , and reference the (logout) file in the anchor tag for the very nav-link meant for the ADMIN Page.
+(localhost/hms/admin/index.php)
